@@ -1,0 +1,67 @@
+/* 1. Reset de caja (Box Sizing)
+   Esto hace que el padding y el border no sumen al ancho total del elemento.
+   Es vital para el diseño responsivo. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Reset de márgenes y rellenos
+   Quitamos los espacios que el navegador pone por defecto en todas las etiquetas. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Mejoras en el cuerpo (Body)
+   Aseguramos que ocupe el alto total y suavizamos las fuentes. */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-family: sans-serif; /* Puedes cambiarla después */
+}
+
+/* 4. Reset de elementos multimedia
+   Evita que las imágenes se salgan de su contenedor. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Reset de tipografía en formularios
+   Los botones e inputs no heredan la fuente del body por defecto; esto lo arregla. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Evitar que las palabras largas rompan el diseño */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Quitar estilos de lista (Opcional pero muy común) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 8. Quitar subrayado a los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
