@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
@@ -11,15 +11,255 @@
   </head>
   <body>
     <header id="header">
-      <h1>Esto es una prueba</h1>
+      <h1>Información general de Pedimento</h1>
     </header>
 
     <main>
-      <h2>Formulario pedimento</h2>
+      <section id="main__section">
+        <img src="assets/img/main.png" alt="" />
+      </section>
+      <h2>Ingresa la siguiente información</h2>
+      <form id="main__form">
+        <div id="cntrGeneralInfo" class="form__general-info">
+          <fieldset id="formGeneralInfo">
+            <legend id="fieldSetGeneralInfo" class="fieldset__general-info">
+              Datos generales
+            </legend>
+            <label for="inputPedimentoYear" id="lblPedimentoYear"
+              >Año <span class="field-required"> *</span></label
+            >
+            <select
+              name="inputPedimentoYear"
+              id="inputPedimentoYear"
+              class="input-required"
+              required
+            >
+              <!-- TODO Crear dinámicamente con JS -->
+              <!-- Etiquetas temporales, para vista. Pero se colocarán con código -->
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+            <label for="inputCustom" id="lblCustom"
+              >Aduana <span class="field-required"> *</span>
+            </label>
+            <select
+              name="inputCustom"
+              id="inputCustom"
+              class="input-required"
+              required
+            >
+              <!-- Etiquetas temporales, para vista. Pero se colocarán con código -->
+              <!-- TODO Crear dinámicamente con JS -->
+              <option value="240">240 - Nuevo Laredo</option>
+              <option value="510">510 - Lázaro Cárdenas</option>
+            </select>
+
+            <label for="inputPatente" id="lblPatente"
+              >Patente<span class="field-required"> *</span>
+            </label>
+            <select
+              name="inputPatente"
+              id="inputPatente"
+              class="input-required"
+              required
+            >
+              <!-- Etiquetas temporales, para vista. Pero se colocarán con código -->
+              <!-- TODO Crear dinámicamente con JS -->
+              <option value="3797">3797</option>
+              <option value="3076">3076</option>
+            </select>
+            <label for="inputPedimento" id="lblPedimento"
+              >Pedimento <span class="field-required"> *</span></label
+            >
+            <input
+              type="text"
+              name="inputPedimento"
+              id="inputPedimento"
+              placeholder="1234567"
+              class="input-required"
+              pattern="^(?!0{7})\d{7}$"
+              title="El pedimento debe ser en formato de 7 dígitos"
+              aria-describedby="formatPedimento"
+              required
+            />
+            <div id="formatPedimento" class="helper-text">
+              El pedimento debe ser en formato de 7 dígitos
+            </div>
+            <label for="inputPedimentoDate" id="lblPedimentoDate"
+              >Fecha de <strong> entrada </strong> (o pago en
+              <strong> consolidados</strong>)
+              <span class="field-required"> *</span></label
+            >
+            <input
+              type="date"
+              id="inputPedimentoDate"
+              name="inputPedimentoDate"
+              class="input-required"
+              required
+            />
+          </fieldset>
+        </div>
+        <br />
+        <div id="cntrPedimentoValues" class="form__pedimento-values">
+          <fieldset id="formPedimentoValues">
+            <legend
+              id="fieldSetPedimentoValues"
+              class="fieldset__pedimento-values"
+            >
+              Información relacionada con el valor de la mercancía
+            </legend>
+            <label for="inputExchangeRate" id="lblExchangeRate"
+              >Tipo de cambio <span class="field-required"> *</span></label
+            >
+            <input
+              type="number"
+              id="inputExchangeRate"
+              name="inputExchangeRate"
+              class="input-required"
+              placeholder="17.21572"
+              step="0.00001"
+              required
+            />
+
+            <label for="inputCommercialValue" id="lblCommercialValue"
+              >Valor Comercial <span class="field-required"> *</span></label
+            >
+            <input
+              type="number"
+              id="inputCommercialValue"
+              name="inputCommercialValue"
+              class="input-required"
+              placeholder="87945"
+              step="1"
+              required
+            />
+            <label for="inputCustomValue" id="lblCustomValue"
+              >Valor en Aduana <span class="field-required"> *</span></label
+            >
+            <input
+              type="number"
+              id="inputCustomValue"
+              name="inputCustomValue"
+              class="input-required"
+              placeholder="98587"
+              required
+              step="1"
+            />
+            <label for="checkboxEB" id="lblEB"
+              >Partidas con identificador EB</label
+            >
+            <input
+              type="checkbox"
+              id="checkboxEB"
+              name="checkboxEB"
+              disabled="disabled"
+            />
+            <input
+              type="number"
+              min="1"
+              class="input-required"
+              id="inputEB"
+              name="inputEB"
+              style="display: none"
+            />
+
+            <label for="inputIncreasables" id="lblIncreasables"
+              >Incrementables</label
+            >
+            <input
+              type="number"
+              id="inputIncreasables"
+              readonly
+              name="inputIncreasables"
+            />
+          </fieldset>
+        </div>
+        <br />
+        <div id="cntrOtherInfo" class="form__other-info">
+          <fieldset id="formOtherInfo">
+            <legend id="fieldSetOtherInfo" class="fieldset__other-info">
+              Otros datos
+            </legend>
+            <label for="inputPreference" id="lblPreference"
+              >Preferencia TLC<span class="field-required"> *</span>
+            </label>
+            <select
+              name="inputPreference"
+              id="inputPreference"
+              class="input-required"
+              required
+            >
+              <!-- Etiquetas temporales, para vista. Pero se colocarán con código -->
+              <option value="">
+                Indica si se aplicó o no preferencia arancelaria
+              </option>
+              <option value="yes">Sí</option>
+              <option value="no">No</option>
+            </select>
+
+            <label for="inputValuationMethod" id="lblValuationMethod"
+              >Método de valoración<span class="field-required"> *</span>
+            </label>
+            <select
+              name="inputValuationMethod"
+              id="inputValuationMethod"
+              class="input-required"
+              required
+            >
+              <!-- Etiquetas temporales, para vista. Pero se colocarán con código -->
+              <option value="">Elige el método de valoración</option>
+              <option value="1">1 - Valor de transacción</option>
+              <option value="2">
+                2 - Valor de transacción de mercancías idénticas
+              </option>
+              <option value="3">
+                3 - Valor de transacción de mercancías similares
+              </option>
+              <option value="4">4 - Precio unitario de venta</option>
+              <option value="5">5 - Valor reconstruido</option>
+              <option value="6">6 - Artículo 78 (Último recurso)</option>
+              <option value="several">Varios</option>
+            </select>
+            <label for="inputReference" id="lblReference">Referencia</label>
+            <input
+              type="text"
+              id="inputReference"
+              name="inputReference"
+              placeholder="Ej. OC-874524"
+            />
+          </fieldset>
+        </div>
+        <div id="cntrCOVE" class="form__cove">
+          <fieldset id="formCOVE">
+            <legend id="fieldSetCOVE" class="fieldset__cove">
+              Ingresa el o los COVE declarados en tu pedimento
+            </legend>
+            <label for="inputCOVE" id="lblCOVE">COVE</label>
+            <input
+              type="text"
+              id="inputCOVE"
+              class="input-required"
+              pattern="^COVE\d{2}[A-Z0-9]{7}$"
+              title="El formato debe ser COVENNXXXXXXX"
+              aria-describedby="formatCOVE"
+            />
+            <div id="formatCOVE" class="helper-text">
+              El formato debe ser COVENNXXXXXXX
+            </div>
+            <button type="button" id="btnAgregarCOVE" class="btn-add">
+              + Agregar
+            </button>
+          </fieldset>
+        </div>
+        <div id="cntrCoveAgregados">
+          <ul id="lstCoveAgregados"></ul>
+        </div>
+        <input type="submit" id="btnEnviar" value="Guardar" />
+      </form>
     </main>
 
     <footer>
-      <p>Esto es otra prueba</p>
+      <p>&copy; Derechos reservados a Consultores y sistemas Zed</p>
     </footer>
   </body>
 </html>
