@@ -82,7 +82,7 @@
               aria-describedby="formatPedimento"
               required
             />
-            <div id="formatPedimento" class="helper-text">
+            <div id="formatPedimento" class="helper-text hidden">
               El pedimento debe ser en formato de 7 dígitos
             </div>
             <label for="inputPedimentoDate" id="lblPedimentoDate"
@@ -157,10 +157,9 @@
             <input
               type="number"
               min="1"
-              class="input-required"
+              class="input-required hidden"
               id="inputEB"
               name="inputEB"
-              style="display: none"
             />
 
             <label for="inputIncreasables" id="lblIncreasables"
@@ -243,7 +242,7 @@
               title="El formato debe ser COVENNXXXXXXX"
               aria-describedby="formatCOVE"
             />
-            <div id="formatCOVE" class="helper-text">
+            <div id="formatCOVE" class="helper-text hidden">
               El formato debe ser COVENNXXXXXXX
             </div>
             <button type="button" id="btnAgregarCOVE" class="btn-add">
