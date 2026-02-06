@@ -1,0 +1,57 @@
+:root {
+  /* === COLORES === */
+
+  /* Primarios */
+  --color-primary: #617995;
+  --color-primary-dark: #4a5d73;
+  --color-primary-light: #8fa3b8;
+  --color-primary-lighter: #e8ecf1;
+  /* Neutros */
+  --color-text: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-bg: #f8f9fa;
+  --color-bg-input: #ffffff;
+  --color-border: #cbd5e0;
+  /* Feedback */
+  --color-error: #e74c3c;
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+
+  /* === ESPACIADO === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* === TIPOGRAFÍA === */
+  --font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue",
+    Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* === BORDES === */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+
+  /* === TRANSICIONES === */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+
+  /* === SOMBRAS === */
+  --shadow-sm: 0 1px 3px rgba(97, 121, 149, 0.1);
+  --shadow-md: 0 4px 6px rgba(97, 121, 149, 0.15);
+}

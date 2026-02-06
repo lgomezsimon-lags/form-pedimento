@@ -5,6 +5,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
 }
 
 /* 2. Reset de márgenes y rellenos
@@ -20,7 +21,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  font-family: sans-serif; /* Puedes cambiarla después */
 }
 
 /* 4. Reset de elementos multimedia

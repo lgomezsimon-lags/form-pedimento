@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="assets/js/main.js" defer></script>
     <title>Pedimento aduanal</title>
@@ -15,9 +17,9 @@
     </header>
 
     <main>
-      <section id="main__section">
+      <!-- <section id="main__section">
         <img src="assets/img/main.png" alt="" />
-      </section>
+      </section> -->
       <h2>Ingresa la siguiente información</h2>
       <form id="main__form">
         <div id="cntrGeneralInfo" class="form__general-info">
@@ -25,9 +27,12 @@
             <legend id="fieldSetGeneralInfo" class="fieldset__general-info">
               Datos generales
             </legend>
-            <label for="inputPedimentoYear" id="lblPedimentoYear"
-              >Año <span class="field-required"> *</span></label
-            >
+            <label
+              class="field-required"
+              for="inputPedimentoYear"
+              id="lblPedimentoYear"
+              >Año
+            </label>
             <select
               name="inputPedimentoYear"
               id="inputPedimentoYear"
@@ -39,8 +44,8 @@
               <option value="2025">2025</option>
               <option value="2026">2026</option>
             </select>
-            <label for="inputCustom" id="lblCustom"
-              >Aduana <span class="field-required"> *</span>
+            <label class="field-required" for="inputCustom" id="lblCustom"
+              >Aduana
             </label>
             <select
               name="inputCustom"
@@ -54,8 +59,8 @@
               <option value="510">510 - Lázaro Cárdenas</option>
             </select>
 
-            <label for="inputPatente" id="lblPatente"
-              >Patente<span class="field-required"> *</span>
+            <label class="field-required" for="inputPatente" id="lblPatente"
+              >Patente
             </label>
             <select
               name="inputPatente"
@@ -68,9 +73,9 @@
               <option value="3797">3797</option>
               <option value="3076">3076</option>
             </select>
-            <label for="inputPedimento" id="lblPedimento"
-              >Pedimento <span class="field-required"> *</span></label
-            >
+            <label class="field-required" for="inputPedimento" id="lblPedimento"
+              >Pedimento
+            </label>
             <input
               type="text"
               name="inputPedimento"
@@ -85,11 +90,13 @@
             <div id="formatPedimento" class="helper-text hidden">
               El pedimento debe ser en formato de 7 dígitos
             </div>
-            <label for="inputPedimentoDate" id="lblPedimentoDate"
+            <label
+              class="field-required"
+              for="inputPedimentoDate"
+              id="lblPedimentoDate"
               >Fecha de <strong> entrada </strong> (o pago en
               <strong> consolidados</strong>)
-              <span class="field-required"> *</span></label
-            >
+            </label>
             <input
               type="date"
               id="inputPedimentoDate"
@@ -108,9 +115,12 @@
             >
               Información relacionada con el valor de la mercancía
             </legend>
-            <label for="inputExchangeRate" id="lblExchangeRate"
-              >Tipo de cambio <span class="field-required"> *</span></label
-            >
+            <label
+              class="field-required"
+              for="inputExchangeRate"
+              id="lblExchangeRate"
+              >Tipo de cambio
+            </label>
             <input
               type="number"
               id="inputExchangeRate"
@@ -121,9 +131,12 @@
               required
             />
 
-            <label for="inputCommercialValue" id="lblCommercialValue"
-              >Valor Comercial <span class="field-required"> *</span></label
-            >
+            <label
+              class="field-required"
+              for="inputCommercialValue"
+              id="lblCommercialValue"
+              >Valor Comercial
+            </label>
             <input
               type="number"
               id="inputCommercialValue"
@@ -133,9 +146,12 @@
               step="1"
               required
             />
-            <label for="inputCustomValue" id="lblCustomValue"
-              >Valor en Aduana <span class="field-required"> *</span></label
-            >
+            <label
+              class="field-required"
+              for="inputCustomValue"
+              id="lblCustomValue"
+              >Valor en Aduana
+            </label>
             <input
               type="number"
               id="inputCustomValue"
@@ -179,8 +195,11 @@
             <legend id="fieldSetOtherInfo" class="fieldset__other-info">
               Otros datos
             </legend>
-            <label for="inputPreference" id="lblPreference"
-              >Preferencia TLC<span class="field-required"> *</span>
+            <label
+              class="field-required"
+              for="inputPreference"
+              id="lblPreference"
+              >Preferencia TLC
             </label>
             <select
               name="inputPreference"
@@ -196,8 +215,11 @@
               <option value="no">No</option>
             </select>
 
-            <label for="inputValuationMethod" id="lblValuationMethod"
-              >Método de valoración<span class="field-required"> *</span>
+            <label
+              class="field-required"
+              for="inputValuationMethod"
+              id="lblValuationMethod"
+              >Método de valoración
             </label>
             <select
               name="inputValuationMethod"
